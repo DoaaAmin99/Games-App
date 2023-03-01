@@ -1,0 +1,135 @@
+/***** Global *****/
+@font-face {
+  font-family: Comfortaa, cursive;
+  src: url(../fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Nerko One, cursive;
+  src: url(../fonts/Nerko_One/NerkoOne-Regular.ttf);
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  background-color: #272b30;
+  color: #fff;
+}
+/* nav ul li a{
+    cursor: pointer;
+} */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nerko One", cursive;
+  color: #fff !important;
+}
+a,
+p,
+span {
+  color: #fff !important;
+}
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #32383e;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #272b30;
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 0.5) inset;
+}
+/***** End Global *****/
+/***** Heade & NavBar *****/
+header .head-bg img {
+  height: 30vh;
+  object-fit: cover;
+}
+nav {
+  background-color: rgb(58, 73, 123) !important;
+  margin-inline: auto;
+  /* margin-top: -30px; */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+  /* top: 25% !important;
+    left: 15% !important; */
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+  color: #09c !important;
+  transition: color 0.5s;
+}
+/***** End NavBar *****/
+/***** Games Cards *****/
+.games .card {
+  filter: grayscale(0.7);
+  transition: transform 0.5s, filter 0.5s 0.1s;
+}
+.games .card:hover {
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+.badge-color {
+  background-color: #32383e;
+}
+/***** End Games Cards *****/
+/***** Game Detailes *****/
+.game-dtails {
+  position: absolute;
+  background-color: #272729be;
+  backdrop-filter: blur(4px);
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/***** End Game Detailes *****/
+/***** Loader *****/
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: relative;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/***** End Loader *****/
